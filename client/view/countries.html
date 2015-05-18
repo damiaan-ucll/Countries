@@ -1,0 +1,18 @@
+<template name="Countries">
+	<h1>Countries</h1>
+	<table>
+		<th>Country</th>
+		{{#each this}}
+			<tr><td><a href="/country/{{name}}">{{name}}</a></td></tr>
+		{{/each}}
+	</table>
+	
+	{{> addCountry}}
+</template>
+
+<template name="addCountry">
+	<form>
+		<input type="text" class="addCountryName">
+		<input type="submit">
+	</form>
+</template>

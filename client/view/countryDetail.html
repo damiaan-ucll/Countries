@@ -1,0 +1,27 @@
+<template name="CountryDetail">
+	<h1 class="countryName">{{name}}</h1>
+	<a href="/">home</a>
+	<ul>
+		{{#each specialtiesCursor}}
+			<li>{{> specialty}}</li>			
+		{{/each}}
+	</ul>
+
+	{{> addSpecialties}}
+</template>
+
+<template name="addSpecialties">
+	{{#if newSpecialties.count}}
+	<select>
+		{{#each newSpecialties}}
+			<option value="{{_id}}">{{name}}</option>
+		{{/each}}
+	</select>
+
+	<button class="addSpecialty">Add</button>
+	{{/if}}
+</template>
+
+<template name="specialty">
+	{{name}} <button class="deleteSpecialty">delete me!</button>
+</template>

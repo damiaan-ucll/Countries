@@ -1,0 +1,1 @@
+translate = TAPi18n.__
